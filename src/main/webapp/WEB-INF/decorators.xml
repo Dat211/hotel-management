@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+
+	<!-- apply web template -->
+	<decorator name="web" page="web.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	<!-- apply home template -->
+	<decorator name="admin" page="admin.jsp">
+		<pattern>/quan-tri*</pattern>
+	</decorator>
+
+	<!--Vấn đề là với mỗi trang khác nhau thì cần phải có định nghĩa pattern 
+		của nó Nên sẽ sinh ra rất nhiều decorator trong này -> thêm dấu sao -->
+
+	<decorator name="login" page="login.jsp">
+		<pattern>/dang-nhap</pattern>
+	</decorator>
+</decorators>

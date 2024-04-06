@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "order")
 public class OrderEntity extends BaseEntity {
+	
 	@Column
 	private Date checkindate;
 

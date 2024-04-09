@@ -4,11 +4,27 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class OrderEntity extends BaseEntity {
+	
+
+	@ManyToOne
+    @JoinColumn(name = "account_id")
+    private AccountEntity account;
+	
+	@ManyToOne
+    @JoinColumn(name = "room_id")
+    private RoomEntity room;
+	
+	@ManyToOne
+    @JoinColumn(name = "promotion_id")
+    private PromotionEntity promotion;
 	
 	@Column
 	private Date checkindate;
@@ -52,6 +68,30 @@ public class OrderEntity extends BaseEntity {
 
 	public void setTotalpirce(float totalpirce) {
 		this.totalpirce = totalpirce;
+	}
+
+	public AccountEntity getAccount() {
+		return account;
+	}
+
+	public void setAccount(AccountEntity account) {
+		this.account = account;
+	}
+
+	public RoomEntity getRoom() {
+		return room;
+	}
+
+	public void setRoom(RoomEntity room) {
+		this.room = room;
+	}
+
+	public PromotionEntity getPromotion() {
+		return promotion;
+	}
+
+	public void setPromotion(PromotionEntity promotion) {
+		this.promotion = promotion;
 	}
 	
 	

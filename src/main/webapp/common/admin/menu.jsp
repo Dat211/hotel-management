@@ -24,7 +24,7 @@
 
 	<!-- Nav Item - Dashboard -->
 	<li class="nav-item active"><a class="nav-link" href="index.html">
-			<i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span>
+			<i class="fas fa-fw fa-tachometer-alt"></i> <span>Bảng điều khiển</span>
 	</a></li>
 
 	<!-- Divider -->
@@ -41,10 +41,10 @@
 		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 			data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="<c:url value = '#'/>">Quản lý
-					khách hàng</a> <a class="collapse-item" href="<c:url value = '#'/>">Quản
+				<a class="collapse-item" href="<c:url value = '/quan-tri/khach-hang'/>">Quản lý
+					khách hàng</a> <a class="collapse-item" href="<c:url value = '/quan-tri/nhan-vien'/>">Quản
 					lý nhân viên</a> <a class="collapse-item"
-					href="<c:url value = '#'/>">Quản lý loại phòng</a>
+					href="<c:url value = '/quan-tri/loai-phong'/>">Quản lý loại phòng</a>
 					<a class="collapse-item"
 					href="<c:url value = '/quan-tri/phong'/>">Quản lý phòng</a>
 			</div>
@@ -56,14 +56,13 @@
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item"><a class="nav-link collapsed" href="#"
 		data-toggle="collapse" data-target="#collapseThree"
-		aria-expanded="true" aria-controls="collapseThree"> <i
-			class="fas fa-fw fa-folder"></i> <span>Thống kê và khuyến mãi
+		aria-expanded="true" aria-controls="collapseThree"> <i class="fas fa-fw fa-solid fa-percent" style="color: #5696c8;"></i><span>Thống kê và khuyến mãi
 		</span>
 	</a>
 		<div id="collapseThree" class="collapse" aria-labelledby="headingTwo"
 			data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="<c:url value = '#'/>">Quản lý
+				<a class="collapse-item" href="<c:url value = '/quan-tri/khuyen-mai'/>">Quản lý
 					khuyễn mãi</a>
 			</div>
 		</div></li>

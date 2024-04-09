@@ -1,402 +1,446 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ include file="/common/taglib.jsp"%>
 
-  <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="hero-text">
-                        <h1>Sona A Luxury Hotel</h1>
-                        <p>Here are the best hotel booking sites, including recommendations for international
-                            travel and for finding low-priced hotel rooms.</p>
-                        <a href="#" class="primary-btn">Discover Now</a>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
-                    <div class="booking-form">
-                        <h3>Booking Your Hotel</h3>
-                        <form action="#">
-                            <div class="check-date">
-                                <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="select-option">
-                                <label for="guest">Guests:</label>
-                                <select id="guest">
-                                    <option value="">2 Adults</option>
-                                    <option value="">3 Adults</option>
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Room:</label>
-                                <select id="room">
-                                    <option value="">1 Room</option>
-                                    <option value="">2 Room</option>
-                                </select>
-                            </div>
-                            <button type="submit">Check Availability</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-slider owl-carousel">
-            <div class="hs-item set-bg" data-setbg="<c:url value = '/template/web/img/hero/hero-1.jpg'/>"></div>
-            <div class="hs-item set-bg" data-setbg="<c:url value = '/template/web/img/hero/hero-2.jpg'/>"></div>
-            <div class="hs-item set-bg" data-setbg="<c:url value = '/template/web/img/hero/hero-3.jpg'/>"></div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+<section class="hero-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="hero-text">
+					<h1>Khách sạn Bình Minh</h1>
+					<p>Dưới đây là những trang web đặt phòng khách sạn hàng đầu,
+						bao gồm các đề xuất cho du lịch quốc tế và để tìm phòng khách sạn
+						giá rẻ.</p>
+					<a href="#" class="primary-btn">Discover Now</a>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+				<div class="booking-form">
+					<h3>Đặt phòng</h3>
+					<form action="#">
+						<div class="check-date">
+							<label for="date-in">Check In:</label> <input type="text"
+								class="date-input" id="date-in"> <i
+								class="icon_calendar"></i>
+						</div>
+						<div class="check-date">
+							<label for="date-out">Check Out:</label> <input type="text"
+								class="date-input" id="date-out"> <i
+								class="icon_calendar"></i>
+						</div>
+						<div class="select-option">
+							<label for="guest">Số người:</label> <select id="guest">
+								<option value="">1 người</option>
+								<option value="">2 người</option>
+								<option value="">3 người</option>
+							</select>
+						</div>
+						<div class="select-option">
+							<label for="room">Loại phòng:</label> <select id="room">
+								<option value="">Phòng đơn</option>
+								<option value="">Phòng đôi</option>
+								<option value="">Phòng gia đình</option>
+								<option value="">Phòng sang trọng</option>
+							</select>
+						</div>
+						<button type="submit">Kiểm tra</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero-slider owl-carousel">
+		<div class="hs-item set-bg"
+			data-setbg="<c:url value = '/template/web/img/hero/hero-1.jpg'/>"></div>
+		<div class="hs-item set-bg"
+			data-setbg="<c:url value = '/template/web/img/hero/hero-2.jpg'/>"></div>
+		<div class="hs-item set-bg"
+			data-setbg="<c:url value = '/template/web/img/hero/hero-3.jpg'/>"></div>
+	</div>
+</section>
+<!-- Hero Section End -->
 
-    <!-- About Us Section Begin -->
-    <section class="aboutus-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-text">
-                        <div class="section-title">
-                            <span>About Us</span>
-                            <h2>Intercontinental LA <br />Westlake Hotel</h2>
-                        </div>
-                        <p class="f-para">Sona.com is a leading online accommodation site. We’re passionate about
-                            travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
-                            languages.</p>
-                        <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
-                            apartment, guest house, or tree house, we’ve got you covered.</p>
-                        <a href="#" class="primary-btn about-btn">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-pic">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="<c:url value = '/template/web/img/about/about-1.jpg'/>" alt=""/>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="<c:url value = '/template/web/img/about/about-p2.jpg'/>" alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Us Section End -->
+<!-- About Us Section Begin -->
+<section class="aboutus-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="about-text">
+					<div class="section-title">
+						<span>Về chúng tôi</span>
+						<h2>
+							Huế <br />Bình Minh Hotel
+						</h2>
+					</div>
+					<p class="f-para">Đặt phòng ngay hôm nay để có khuyến mãi hấp đẫn.</p>
+					<p class="s-para">Hãy đến với chúng tôi để có một trải nghiệm tuyệt vời.</p>
+					<a href="#" class="primary-btn about-btn">Đọc thêm</a>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="about-pic">
+					<div class="row">
+						<div class="col-sm-6">
+							<img src="<c:url value = '/template/web/img/about/about-1.jpg'/>"
+								alt="" />
+						</div>
+						<div class="col-sm-6">
+							<img
+								src="<c:url value = '/template/web/img/about/about-p2.jpg'/>"
+								alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- About Us Section End -->
 
-    <!-- Services Section End -->
-    <section class="services-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>What We Do</span>
-                        <h2>Discover Our Services</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-036-parking"></i>
-                        <h4>Travel Plan</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-033-dinner"></i>
-                        <h4>Catering Service</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-026-bed"></i>
-                        <h4>Babysitting</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-024-towel"></i>
-                        <h4>Laundry</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-044-clock-1"></i>
-                        <h4>Hire Driver</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service-item">
-                        <i class="flaticon-012-cocktail"></i>
-                        <h4>Bar & Drink</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
+<!-- Services Section End -->
+<section class="services-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<span>Dịch vụ</span>
+					<h2>Khám phá dịch vụ của chúng tôi</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-036-parking"></i>
+					<h4>Kế Hoạch Du Lịch</h4>
+					<p>Chúng tôi có các tour du lịch giúp các bạn có trải nghiệm
+						trọn vẹn và tuyệt vời mà không cần phải suy nghĩ quá nhiều.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-033-dinner"></i>
+					<h4>Ẩm thực</h4>
+					<p>Với những món ăn được lên ý tưởng bời những đầu bếp tay nghề
+						lâu năm của chúng tôi, mang đến những trải nghiệm độc đáo và mới
+						lạ.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-026-bed"></i>
+					<h4>Vui chơi</h4>
+					<p>Chúng tôi có nhiều sự kiện hoạt động giữu du khách, đảm bảo
+						mang đến cho quy khách một thời gian vui vẻ.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-024-towel"></i>
+					<h4>Giặt ủi</h4>
+					<p>đảm bảo quần áo của bạn luôn sạch sẽ và sẵn sàng cho bất kỳ
+						sự kiện nào.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-044-clock-1"></i>
+					<h4>thuê tài xế</h4>
+					<p>Giúp di chuyển một cách an toàn và tiện lợi, không bó buộc
+						về mặt thời gian, tự do khám phá theo ước muốn của bạn</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<div class="service-item">
+					<i class="flaticon-012-cocktail"></i>
+					<h4>Quầy bar</h4>
+					<p>Chúng tôi cung cấp đồ uống phong phú và hấp dẫn, giúp bạn
+						thư giãn và thưởng thức những khoảnh khắc thú vị tại khách sạn của
+						chúng tôi.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Services Section End -->
 
-    <!-- Home Room Section Begin -->
-    <section class="hp-room-section">
-        <div class="container-fluid">
-            <div class="hp-room-items">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="<c:url value = '/template/web/img/room/room-b1.jpg'/>">
-                        
-                            <div class="hr-text">
-                                <h3>Double Room</h3>
-                                <h2>199$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="<c:url value = '/template/web/img/room/room-b2.jpg'/>">
-                            <div class="hr-text">
-                                <h3>Premium King Room</h3>
-                                <h2>159$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="<c:url value = '/template/web/img/room/room-b3.jpg'/>">
-                            <div class="hr-text">
-                                <h3>Deluxe Room</h3>
-                                <h2>198$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="<c:url value = '/template/web/img/room/room-b4.jpg'/>">
-                            <div class="hr-text">
-                                <h3>Family Room</h3>
-                                <h2>299$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Home Room Section End -->
+<!-- Home Room Section Begin -->
+<section class="hp-room-section">
+	<div class="container-fluid">
+		<div class="hp-room-items">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="hp-room-item set-bg"
+						data-setbg="<c:url value = '/template/web/img/room/room-b1.jpg'/>">
 
-    <!-- Testimonial Section Begin -->
-    <section class="testimonial-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Testimonials</span>
-                        <h2>What Customers Say?</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="testimonial-slider owl-carousel">
-                        <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
-                            <div class="ti-author">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5> - Alexander Vasquez</h5>
-                            </div>
-                            <img src="img/testimonial-logo.png" alt="">
-                        </div>
-                        <div class="ts-item">
-                            <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                                city, neighborhood and the types of housing options available and absolutely love our
-                                vacation at Sona Hotel.</p>
-                            <div class="ti-author">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5> - Alexander Vasquez</h5>
-                            </div>
-                            <img src="img/testimonial-logo.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonial Section End -->
+						<div class="hr-text">
+							<h3>Phòng đơn</h3>
+							<h2>
+								440.000 VNĐ<span>/Đêm</span>
+							</h2>
+							<table>
+								<tbody>
+									<tr>
+										<td class="r-o">Không gian:</td>
+										<td>30 m</td>
+									</tr>
+									<tr>
+										<td class="r-o">Sức chứa:</td>
+										<td>2 người</td>
+									</tr>
+									<tr>
+										<td class="r-o">Giườn:</td>
+										<td>Giườn đôi</td>
+									</tr>
+									<tr>
+										<td class="r-o">Dịch vụ:</td>
+										<td>Wifi, TV, Bồn tắm,...</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="#" class="primary-btn">Thông tin chi tiết</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="hp-room-item set-bg"
+						data-setbg="<c:url value = '/template/web/img/room/room-b2.jpg'/>">
+						<div class="hr-text">
+							<h3>Phòng đơn</h3>
+							<h2>
+								200.000 VNĐ<span>/Đêm</span>
+							</h2>
+							<table>
+								<tbody>
+									<tr>
+										<td class="r-o">Không gian:</td>
+										<td>20 m</td>
+									</tr>
+									<tr>
+										<td class="r-o">Sức chứa:</td>
+										<td>1 người</td>
+									</tr>
+									<tr>
+										<td class="r-o">Giườn:</td>
+										<td>Giườn đơn</td>
+									</tr>
+									<tr>
+										<td class="r-o">Dịch vụ:</td>
+										<td>Wifi, TV, Phòng tắm,...</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="#" class="primary-btn">Thông tin chi tiết</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="hp-room-item set-bg"
+						data-setbg="<c:url value = '/template/web/img/room/room-b3.jpg'/>">
+						<div class="hr-text">
+							<h3>Phòng sang trọng</h3>
+							<h2>
+								600.000 VNĐ<span>/Đêm</span>
+							</h2>
+							<table>
+								<tbody>
+									<tr>
+										<td class="r-o">Không gian:</td>
+										<td>60 m</td>
+									</tr>
+									<tr>
+										<td class="r-o">Sức chứa:</td>
+										<td>4 người</td>
+									</tr>
+									<tr>
+										<td class="r-o">Giườn:</td>
+										<td>Giườn lớn</td>
+									</tr>
+									<tr>
+										<td class="r-o">Dịch vụ:</td>
+										<td>Wifi, TV, Phòng tắm,...</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="#" class="primary-btn">Thông tin chi tiết</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="hp-room-item set-bg"
+						data-setbg="<c:url value = '/template/web/img/room/room-b4.jpg'/>">
+						<div class="hr-text">
+							<h3>Phòng gia đình</h3>
+							<h2>
+								500.000 VNĐ<span>/Đêm</span>
+							</h2>
+							<table>
+								<tbody>
+									<tr>
+										<td class="r-o">Không gian:</td>
+										<td>60 m</td>
+									</tr>
+									<tr>
+										<td class="r-o">Sức chứa:</td>
+										<td>4 người</td>
+									</tr>
+									<tr>
+										<td class="r-o">Giườn:</td>
+										<td>Giườn lớn</td>
+									</tr>
+									<tr>
+										<td class="r-o">Dịch vụ:</td>
+										<td>Wifi, TV, Phòng tắm,...</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="#" class="primary-btn">Thông tin chi tiết</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Home Room Section End -->
 
-    <!-- Blog Section Begin -->
-    <section class="blog-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Hotel News</span>
-                        <h2>Our Blog & Event</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="<c:url value = '/template/web/img/blog/blog-1.jpg'/>">
-                        <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="#">Tremblant In Canada</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="<c:url value = '/template/web/img/blog/blog-2.jpg'/>">
-                    
-                        <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="#">Choosing A Static Caravan</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item set-bg" data-setbg="<c:url value = '/template/web/img/blog/blog-3.jpg'/>">
-                        <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Copper Canyon</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="blog-item small-size set-bg" data-setbg="<c:url value = '/template/web/img/blog/blog-wide.jpg'/>">
-                    
-                        <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-item small-size set-bg" data-setbg="<c:url value = '/template/web/img/blog/blog-10.jpg'/>">
-                        <div class="bi-text">
-                            <span class="b-tag">Travel</span>
-                            <h4><a href="#">Traveling To Barcelona</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Testimonial Section Begin -->
+<section class="testimonial-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<span>Nhận xét</span>
+					<h2>Khách hàng nói gì ?</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="testimonial-slider owl-carousel">
+					<div class="ts-item">
+						<p>Sau khi dự án xây dựng kéo dài lâu hơn dự kiến, chồng tôi,
+							con gái và tôi cần một nơi ở trong vài đêm. Là cư dân Chicago,
+							chúng tôi biết rất nhiều về thành phố, khu phố của chúng tôi và
+							các lựa chọn nhà ở có sẵn và hoàn toàn thích kỳ nghỉ của chúng
+							tôi tại Bình Minh Hotel.</p>
+						<div class="ti-author">
+							<div class="rating">
+								<i class="icon_star"></i> <i class="icon_star"></i> <i
+									class="icon_star"></i> <i class="icon_star"></i> <i
+									class="icon_star-half_alt"></i>
+							</div>
+							<h5>- Nguyễn Bảo Ngọc</h5>
+						</div>
+						<img src="img/testimonial-logo.png" alt="">
+					</div>
+					<div class="ts-item">
+						<p>Sau khi một dự án xây dựng kéo dài hơn dự kiến, chồng tôi,
+							con gái và tôi cần một nơi lưu trú trong vài đêm. Là cư dân
+							Đà lạt, chúng tôi biết rất nhiều về thành phố, khu phố của chúng
+							tôi và các lựa chọn nhà ở có sẵn và thực sự thích kỳ nghỉ của
+							chúng tôi tại Bình Minh Hotel.</p>
+						<div class="ti-author">
+							<div class="rating">
+								<i class="icon_star"></i> <i class="icon_star"></i> <i
+									class="icon_star"></i> <i class="icon_star"></i> <i
+									class="icon_star-half_alt"></i>
+							</div>
+							<h5>- Quý Hoài Bảo</h5>
+						</div>
+						<img src="img/testimonial-logo.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- Blog Section Begin -->
+<section class="blog-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<span>Hotel News</span>
+					<h2>Our Blog & Event</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="blog-item set-bg"
+					data-setbg="<c:url value = '/template/web/img/blog/blog-1.jpg'/>">
+					<div class="bi-text">
+						<span class="b-tag">Du lịch</span>
+						<h4>
+							<a href="#">Biển Lăng Cô</a>
+						</h4>
+						<div class="b-time">
+							<i class="icon_clock_alt"></i> 15th April, 2019
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="blog-item set-bg"
+					data-setbg="<c:url value = '/template/web/img/blog/blog-2.jpg'/>">
+
+					<div class="bi-text">
+						<span class="b-tag">Cắm trại</span>
+						<h4>
+							<a href="#">Chinh phục trekking Tà Năng – Phan Dũng</a>
+						</h4>
+						<div class="b-time">
+							<i class="icon_clock_alt"></i> 15th April, 2019
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="blog-item set-bg"
+					data-setbg="<c:url value = '/template/web/img/blog/blog-3.jpg'/>">
+					<div class="bi-text">
+						<span class="b-tag">Event</span>
+						<h4>
+							<a href="#">Leo núi</a>
+						</h4>
+						<div class="b-time">
+							<i class="icon_clock_alt"></i> 21th April, 2019
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="blog-item small-size set-bg"
+					data-setbg="<c:url value = '/template/web/img/blog/blog-wide.jpg'/>">
+
+					<div class="bi-text">
+						<span class="b-tag">Event</span>
+						<h4>
+							<a href="#">Chuyến đi đến Huế, một thành phố của Việt Nam</a>
+						</h4>
+						<div class="b-time">
+							<i class="icon_clock_alt"></i> 08th April, 2019
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="blog-item small-size set-bg"
+					data-setbg="<c:url value = '/template/web/img/blog/blog-10.jpg'/>">
+					<div class="bi-text">
+						<span class="b-tag">Travel</span>
+						<h4>
+							<a href="#">Du lịch đến Đà Nẵng</a>
+						</h4>
+						<div class="b-time">
+							<i class="icon_clock_alt"></i> 12th April, 2019
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

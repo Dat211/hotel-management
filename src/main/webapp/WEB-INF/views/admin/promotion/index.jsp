@@ -28,7 +28,7 @@
 											class="col-lg-4 d-flex flex-column pr-3 justify-content-end">
 											<!-- Thêm justify-content-end vào đây -->
 											<div class="d-flex justify-content-end">
-												<a href="#"
+												<a href="<c:url value='/quan-tri/khuyen-mai/chinh-sua'/>"
 													class="btn btn-sm btn-primary btn-modal w-25 mb-1"> <i
 													class="fa fa-edit"></i>
 												</a>

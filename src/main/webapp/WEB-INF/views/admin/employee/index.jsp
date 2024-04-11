@@ -69,7 +69,7 @@
 											<td>0893879981</td>
 											<td>12, Nguyễn Huệ</td>
 											<td>Đang làm việc</td>
-											<td><a href="#" class="btn btn-xs btn-primary btn-sm">
+											<td><a href="<c:url value='/quan-tri/nhan-vien/chinh-sua'/>" class="btn btn-xs btn-primary btn-sm">
 													<i class="fa fa-edit"></i>
 											</a> <a href="#" class="btn btn-xs btn-danger btn-sm"
 												onclick="return confirm('Xóa nhân viên này ?')"> <i

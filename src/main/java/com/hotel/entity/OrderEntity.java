@@ -36,7 +36,7 @@ public class OrderEntity extends BaseEntity {
 	private int quantity;
 
 	@Column
-	private float totalpirce;
+	private float totalprice;
 
 	public Date getCheckindate() {
 		return checkindate;
@@ -63,11 +63,11 @@ public class OrderEntity extends BaseEntity {
 	}
 
 	public float getTotalpirce() {
-		return totalpirce;
+		return totalprice;
 	}
 
 	public void setTotalpirce(float totalpirce) {
-		this.totalpirce = totalpirce;
+		this.totalprice = totalpirce;
 	}
 
 	public AccountEntity getAccount() {

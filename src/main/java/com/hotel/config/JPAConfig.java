@@ -57,7 +57,7 @@ public class JPAConfig {
 	
 	Properties additionalProperties() {
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto", "create");//tao db khi chua co(xoa roi tao lai)
+		properties.setProperty("hibernate.hbm2ddl.auto", "none");//tao db khi chua co(xoa roi tao lai)
 		properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");//bật tính năng lazy loading 
 		return properties;
 	}

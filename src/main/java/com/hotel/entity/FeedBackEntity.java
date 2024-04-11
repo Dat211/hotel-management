@@ -21,6 +21,29 @@ public class FeedBackEntity extends BaseEntity {
 	@Column
 	private String description;
 
+	@Column 
+	private boolean status;
+	
+	public AccountEntity getAccount() {
+		return account;
+	}
+
+	public void setAccount(AccountEntity account) {
+		this.account = account;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+	public void setRoom(RoomEntity room) {
+		this.room = room;
+	}
+
 	public AccountEntity getCustomer() {
 		return account;
 	}
@@ -29,11 +52,11 @@ public class FeedBackEntity extends BaseEntity {
 		this.account = customer;
 	}
 
-	public RoomEntity getRooms() {
+	public RoomEntity getRoom() {
 		return room;
 	}
 
-	public void setRooms(RoomEntity rooms) {
+	public void setRooms(RoomEntity room) {
 		this.room = room;
 	}
 

@@ -12,4 +12,22 @@ public class HomeController {
 		ModelAndView mav = new ModelAndView("web/home");
 		return mav;
 	}
+	
+	@RequestMapping(value = "/phong", method = RequestMethod.GET)
+	public ModelAndView room() {
+		ModelAndView mav = new ModelAndView("web/room");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/chi-tiet", method = RequestMethod.GET)
+	public ModelAndView roomdetails() {
+		ModelAndView mav = new ModelAndView("web/details");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/lich-su", method = RequestMethod.GET)
+	public ModelAndView roomhistory() {
+		ModelAndView mav = new ModelAndView("web/history");
+		return mav;
+	}
 }

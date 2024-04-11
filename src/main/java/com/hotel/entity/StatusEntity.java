@@ -17,7 +17,7 @@ public class StatusEntity extends BaseEntity{
 	    private List<RoomEntity> rooms;
 		
 		@Column
-		private boolean statusname;
+		private String statusname;
 
 		public List<RoomEntity> getRooms() {
 			return rooms;
@@ -27,12 +27,14 @@ public class StatusEntity extends BaseEntity{
 			this.rooms = rooms;
 		}
 
-		public boolean isStatus() {
+		public String getStatusname() {
 			return statusname;
 		}
 
-		public void setStatus(boolean status) {
-			this.statusname = status;
+		public void setStatusname(String statusname) {
+			this.statusname = statusname;
 		}
+
+		
 		
 }

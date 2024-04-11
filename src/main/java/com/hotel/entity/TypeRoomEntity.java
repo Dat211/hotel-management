@@ -24,6 +24,8 @@ public class TypeRoomEntity extends BaseEntity {
 	@Column
 	private float price;
 
+	@Column 
+	private String description;
 	public String getName() {
 		return name;
 	}
@@ -54,6 +56,14 @@ public class TypeRoomEntity extends BaseEntity {
 
 	public void setRooms(List<RoomEntity> rooms) {
 		this.rooms = rooms;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	

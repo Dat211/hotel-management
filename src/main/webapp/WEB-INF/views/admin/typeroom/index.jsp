@@ -66,7 +66,7 @@
 											<td>Phòng đôi</td>
 											<td>4</td>
 											<td>125,000</td>
-											<td><a href="#" class="btn btn-xs btn-primary btn-modal">
+											<td><a href="<c:url value='/quan-tri/loai-phong/chinh-sua'/>" class="btn btn-xs btn-primary btn-modal">
 													<i class="fa fa-edit"></i>
 											</a> <a href="#" class="btn btn-xs btn-danger"
 												onclick="return confirm('Xóa loại phòng này ?')"> <i

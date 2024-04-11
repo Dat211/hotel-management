@@ -8,8 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CustomerController {
 	@RequestMapping(value = "/quan-tri/khach-hang", method = RequestMethod.GET)
-	   public ModelAndView index() {
-		   ModelAndView mav = new ModelAndView("admin/customer/index");
-	      return mav;
-	   }
+	public ModelAndView index() {
+		ModelAndView mav = new ModelAndView("admin/customer/index");
+		return mav;
+	}
+
+	@RequestMapping(value = "/quan-tri/khach-hang/chinh-sua", method = RequestMethod.GET)
+	public ModelAndView edit() {
+		ModelAndView mav = new ModelAndView("admin/customer/edit");
+		return mav;
+	}
 }

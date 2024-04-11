@@ -8,7 +8,10 @@
 
 <title><decorator:title default="HOTEL-ADMIN" /></title>
 <!-- Custom fonts for this template-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link
 	href="<c:url  value = '/template/admin/vendor/fontawesome-free/css/all.min.css'/>"
 	rel="stylesheet" type="text/css">
@@ -35,13 +38,13 @@
 			<!-- Main Content -->
 			<div id="content">
 
-					<!-- Header -->
-					<%@ include file="/common/admin/header.jsp"%>
-					<!-- Header -->
+				<!-- Header -->
+				<%@ include file="/common/admin/header.jsp"%>
+				<!-- Header -->
 
-					<!-- Body -->
-					<decorator:body/>
-					<!-- Body -->
+				<!-- Body -->
+				<decorator:body />
+				<!-- Body -->
 			</div>
 			<!-- End of Main Content -->
 
@@ -105,6 +108,28 @@
 		src="<c:url value='/template/admin/js/demo/chart-area-demo.js'/>"></script>
 	<script
 		src="<c:url value='/template/admin/js/demo/chart-pie-demo.js'/>"></script>
+	<!-- date-range -->
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<script>
+		$(function() {
+			$('input[name="daterange"]').daterangepicker(
+					{
+						opens : 'left'
+					},
+					function(start, end, label) {
+						console.log("A new date selection was made: "
+								+ start.format('YYYY-MM-DD') + ' to '
+								+ end.format('YYYY-MM-DD'));
+					});
+		});
+	</script>
 
 </body>
 

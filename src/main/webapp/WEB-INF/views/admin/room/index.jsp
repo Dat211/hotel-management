@@ -84,16 +84,16 @@
 									</tr>
 								</tfoot>
 								<tbody>
-									<c:forEach var="i" begin="1" end="10">
+									<c:forEach items="${list}" var="room">
 										<tr>
 											<td class="text-center" style="width: 200px;"><img
 												class="profile-user-img img-responsive img-bordered"
 												src="<c:url value='/template/web/img/room/room-1.jpg'/>" />
 											</td>
-											<td>Phòng đôi 2 người</td>
-											<td>Phòng trống</td>
-											<td>125,000</td>
-											<td>1 giường đôi</td>
+											<td>${room.name }</td>
+											<td>${room.statusname }</td>
+											<td>${room.price }</td>
+											<td>${room.typename }</td>
 											<td><a href="<c:url value='/quan-tri/phong/sua'/>"
 												class="btn btn-xs btn-primary btn-sm"> <i
 													class="fa fa-edit"></i>

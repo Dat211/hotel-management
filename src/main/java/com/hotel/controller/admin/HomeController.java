@@ -1,7 +1,5 @@
 package com.hotel.controller.admin;
 
-import java.awt.print.Pageable;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

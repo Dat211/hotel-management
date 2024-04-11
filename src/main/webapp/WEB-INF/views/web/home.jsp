@@ -174,7 +174,7 @@
 						data-setbg="<c:url value = '/template/web/img/room/room-b1.jpg'/>">
 
 						<div class="hr-text">
-							<h3>Phòng đơn</h3>
+							<h3>Phòng đôi</h3>
 							<h2>
 								440.000 VNĐ<span>/Đêm</span>
 							</h2>
@@ -189,8 +189,8 @@
 										<td>2 người</td>
 									</tr>
 									<tr>
-										<td class="r-o">Giườn:</td>
-										<td>Giườn đôi</td>
+										<td class="r-o">Giường:</td>
+										<td>Giường đôi</td>
 									</tr>
 									<tr>
 										<td class="r-o">Dịch vụ:</td>
@@ -221,8 +221,8 @@
 										<td>1 người</td>
 									</tr>
 									<tr>
-										<td class="r-o">Giườn:</td>
-										<td>Giườn đơn</td>
+										<td class="r-o">Giường:</td>
+										<td>Giường đơn</td>
 									</tr>
 									<tr>
 										<td class="r-o">Dịch vụ:</td>
@@ -253,8 +253,8 @@
 										<td>4 người</td>
 									</tr>
 									<tr>
-										<td class="r-o">Giườn:</td>
-										<td>Giườn lớn</td>
+										<td class="r-o">Giường:</td>
+										<td>Giường lớn</td>
 									</tr>
 									<tr>
 										<td class="r-o">Dịch vụ:</td>
@@ -285,8 +285,8 @@
 										<td>4 người</td>
 									</tr>
 									<tr>
-										<td class="r-o">Giườn:</td>
-										<td>Giườn lớn</td>
+										<td class="r-o">Giường:</td>
+										<td>Giường lớn</td>
 									</tr>
 									<tr>
 										<td class="r-o">Dịch vụ:</td>

@@ -8,8 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PromotionController {
 	@RequestMapping(value = "/quan-tri/khuyen-mai", method = RequestMethod.GET)
-	   public ModelAndView index() {
-		   ModelAndView mav = new ModelAndView("admin/promotion/index");
-	      return mav;
-	   }
+	public ModelAndView index() {
+		ModelAndView mav = new ModelAndView("admin/promotion/index");
+		return mav;
+	}
+
+	@RequestMapping(value = "/quan-tri/khuyen-mai/chinh-sua", method = RequestMethod.GET)
+	public ModelAndView edit() {
+		ModelAndView mav = new ModelAndView("admin/promotion/edit");
+		return mav;
+	}
 }

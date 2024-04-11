@@ -69,7 +69,7 @@
 											<td>0393872681</td>
 											<td>12, Nguyễn Huệ</td>
 											<td>Không bị khoá</td>
-											<td><a href="#" class="btn btn-xs btn-primary btn-sm">
+											<td><a href="<c:url value='/quan-tri/khach-hang/chinh-sua'/>" class="btn btn-xs btn-primary btn-sm">
 													<i class="fa fa-edit"></i>
 											</a> <a href="#" class="btn btn-xs btn-danger btn-sm"
 												onclick="return confirm('Xóa khách hàng này ?')"> <i

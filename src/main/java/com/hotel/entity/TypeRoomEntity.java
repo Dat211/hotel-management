@@ -15,17 +15,41 @@ public class TypeRoomEntity extends BaseEntity {
 	@OneToMany(mappedBy = "typeroom", cascade = CascadeType.ALL)
     private List<RoomEntity> rooms;
 	
-	@Column
+	@Column(name = "name")
 	private String name;
 
-	@Column
+	@Column(name = "quantity")
 	private int quantity;
 
-	@Column
+	@Column(name = "price")
 	private float price;
 
-	@Column 
+	@Column(name = "description", columnDefinition = "TEXT")
 	private String description;
+	
+	@Column(name = "image")
+	private String image;
+	
+	@Column(name = "space")
+	private int space;
+	
+	
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public int getSpace() {
+		return space;
+	}
+
+	public void setSpace(int space) {
+		this.space = space;
+	}
+
 	public String getName() {
 		return name;
 	}

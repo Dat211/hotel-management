@@ -12,7 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><decorator:title>Hotel ADMIN - Đăng ký</decorator:title></title>
+    <link rel="icon" href="<c:url value='/template/logo.png'/>" type="image/png">
+	<title><decorator:title default="Đăng ký" /></title>
 
     <!-- Custom fonts for this template-->
     <link href="<c:url value='/template/admin/vendor/fontawesome-free/css/all.min.css'/>" rel="stylesheet" type="text/css">
@@ -22,13 +23,24 @@
 
     <!-- Custom styles for this template-->
     <link href="<c:url value='/template/admin/css/sb-admin-2.min.css'/>" rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/font-awesome.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/bootstrap.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/elegant-icons.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/flaticon.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/owl.carousel.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/nice-select.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/jquery-ui.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/magnific-popup.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/slicknav.min.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url  value = '/template/web/css/style.css'/>" type="text/css">
 
 </head>
 
-<body class="bg-gradient-primary">
-
+<body style="background:#dfa974">
+	<%@include file="/common/header_login.jsp" %>
     <decorator:body/>
-
+	<%@include file="/common/footer_login.jsp" %>
     <!-- Bootstrap core JavaScript-->
     <script src="<c:url value = '/template/admin/vendor/jquery/jquery.min.js'/>"></script>
     <script src="<c:url value = '/template/admin/vendor/bootstrap/js/bootstrap.bundle.min.js'/>" ></script>

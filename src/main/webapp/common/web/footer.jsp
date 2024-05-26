@@ -39,12 +39,12 @@
 					<div class="ft-newslatter">
 						<h6>Mới nhất</h6>
 						<p>Nhận thông tin cập nhật và ưu đãi mới nhất.</p>
-						<form action="#" class="fn-form">
-							<input type="text" placeholder="Email">
+						<!-- <form action="#" class="fn-form">
+							<input type="text" placeholder="Phản hồi">
 							<button type="submit">
 								<i class="fa fa-send"></i>
 							</button>
-						</form>
+						</form> -->
 					</div>
 				</div>
 			</div>
@@ -62,19 +62,7 @@
 					</ul>
 				</div>
 				<div class="col-lg-5">
-					<div class="co-text">
-						<p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;
-							<script>
-								document.write(new Date().getFullYear());
-							</script>
-							All rights reserved | This template is made with <i
-								class="fa fa-heart" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">Colorlib</a>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-					</div>
+					
 				</div>
 			</div>
 		</div>

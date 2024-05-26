@@ -10,12 +10,12 @@
 	<!-- Sidebar - Brand -->
 	<a
 		class="sidebar-brand d-flex align-items-center justify-content-center"
-		href="index.html">
-		<div class="sidebar-brand-icon rotate-n-15">
-			<i class="fas fa-laugh-wink"></i>
+		href="<c:url value="/quan-tri/trang-chu"/>">
+		<div class="sidebar-brand-icon rotate-n-10">
+			<i class="fa-solid fa-hotel"></i>
 		</div>
 		<div class="sidebar-brand-text mx-3">
-			Hotel Admin <sup>2</sup>
+			Hotel Admin
 		</div>
 	</a>
 
@@ -23,9 +23,6 @@
 	<hr class="sidebar-divider my-0">
 
 	<!-- Nav Item - Dashboard -->
-	<li class="nav-item active"><a class="nav-link" href="index.html">
-			<i class="fas fa-fw fa-tachometer-alt"></i> <span>Bảng điều khiển</span>
-	</a></li>
 
 	<!-- Divider -->
 	<hr class="sidebar-divider">
@@ -63,7 +60,7 @@
 			data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
 				<a class="collapse-item" href="<c:url value = '/quan-tri/khuyen-mai'/>">Quản lý
-					khuyễn mãi</a>
+					khuyến mãi</a>
 			</div>
 		</div></li>
 		
@@ -76,16 +73,14 @@
 	<li class="nav-item"><a class="nav-link collapsed" href="#"
 		data-toggle="collapse" data-target="#collapseFour"
 		aria-expanded="true" aria-controls="collapseFour"> <i
-			class="fas fa-fw fa-folder"></i> <span>Quản lý phòng</span>
+			class="fas fa-fw fa-folder"></i> <span>Quản lý đặt phòng</span>
 	</a>
 		<div id="collapseFour" class="collapse" aria-labelledby="headingTwo"
 			data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="<c:url value = '#'/>">Quản lý
-					phòng</a> <a class="collapse-item" href="<c:url value = '#'/>">Quản
-					lý đặt phòng</a>
-					<a class="collapse-item" href="<c:url value = '#'/>">Quản
-					lý phiếu đặt phòng</a>
+				<a class="collapse-item" href="<c:url value = '/quan-tri/dat-phong'/>">Đặt phòng</a>
+					<a class="collapse-item" href="<c:url value = '/quan-tri/phieu-dat'/>">Quản
+					lý phiếu đặt</a>
 			</div>
 		</div></li>
 	<!-- Divider -->

@@ -15,7 +15,7 @@ public class OrderEntity extends BaseEntity {
 	
 
 	@ManyToOne
-    @JoinColumn(name = "account_id")
+    @JoinColumn(name = "employee_id")
     private AccountEntity account;
 	
 	@ManyToOne
@@ -26,49 +26,27 @@ public class OrderEntity extends BaseEntity {
     @JoinColumn(name = "promotion_id")
     private PromotionEntity promotion;
 	
-	@Column
-	private Date checkindate;
+	@ManyToOne
+	@JoinColumn(name="status_id")
+	private OrderStatusEntity status;
+	
+	@Column(name = "checkindate")
+	private Date checkinDate;
 
-	@Column
-	private Date checkoutdate;
+	@Column(name = "checkoutdate")
+	private Date checkoutDate;
 
-	@Column
+	@Column(name = "quantity")
 	private int quantity;
 
-	@Column
-	private float totalprice;
-
-	public Date getCheckindate() {
-		return checkindate;
-	}
-
-	public void setCheckindate(Date checkindate) {
-		this.checkindate = checkindate;
-	}
-
-	public Date getCheckoutdate() {
-		return checkoutdate;
-	}
-
-	public void setCheckoutdate(Date checkoutdate) {
-		this.checkoutdate = checkoutdate;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public float getTotalpirce() {
-		return totalprice;
-	}
-
-	public void setTotalpirce(float totalpirce) {
-		this.totalprice = totalpirce;
-	}
+	@Column(name = "totalprice")
+	private float totalPrice;
+	
+/*	@Column(name = "status")
+	private boolean status;*/
+	
+	@Column(name = "customer_id")
+	private  int customerId;
 
 	public AccountEntity getAccount() {
 		return account;
@@ -93,6 +71,68 @@ public class OrderEntity extends BaseEntity {
 	public void setPromotion(PromotionEntity promotion) {
 		this.promotion = promotion;
 	}
-	
-	
+
+	public Date getCheckinDate() {
+		return checkinDate;
+	}
+
+	public void setCheckinDate(java.util.Date checkinDate) {
+		 if (checkinDate != null) {
+		        this.checkinDate = new java.sql.Date(checkinDate.getTime());
+		    } else {
+		        this.checkinDate = null;
+		    }
+	}
+
+	public Date getCheckoutDate() {
+		return checkoutDate;
+	}
+
+	public void setCheckoutDate(java.util.Date checkoutDate) {
+		 if (checkoutDate != null) {
+		        this.checkoutDate = new java.sql.Date(checkoutDate.getTime());
+		    } else {
+		        this.checkoutDate = null;
+		    }
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public float getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(float totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	/*public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}*/
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public OrderStatusEntity getStatus() {
+		return status;
+	}
+
+	public void setStatus(OrderStatusEntity status) {
+		this.status = status;
+	}
 }

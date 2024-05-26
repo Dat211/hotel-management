@@ -3,206 +3,69 @@
 <%@ include file="/common/taglib.jsp"%>
 
 <section class="rooms-section spad">
+	<%-- <div class="container">
+			<form class="row d-flex justify-content-start align-items-center" action="${timPhong }" method="get">
+			    <div class="check-date form-group col-sm-4">
+			        <label for="date-in">Thời gian:</label> 
+			        <input type="text" class="form-control" name="dateRange" value="2024/05/09 - 2024/05/09" />
+			    </div>
+					
+				<div class="check-date form-group col-sm-4">
+					<label class="" for="">Số người:</label> 
+					<select class="form-control" name="countUser" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+						<c:forEach begin="1" end="6" var="item">
+							<option value="${item }">${item } người</option>
+						</c:forEach>
+						
+					</select>
+				</div>
+				<div class="select-option" >
+					
+				</div>
+				<button type="submit" style="height:fit-content; padding : 8px 12px 8px 12px; margin:15px 0 0 18px">Kiểm tra</button>
+			</form>
+	</div> --%>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-1.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Phòng đơn</h4>
-						<h3>
-							440.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>30 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td>1 người</td>
-								</tr>
-								<tr>
-									<td class="r-o">Giường:</td>
-									<td>Giường đơn</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
+			<c:forEach items="${typerooms}" var="item">
+				<div class="col-lg-4 col-md-6">
+					<div class="room-item" >
+						<img style=" width: 380px;height: 250px; object-fit: cover;"  src="<c:url value='${item.image}'/>" alt="" />
+
+						<div class="ri-text">
+							<h4 style="height:50px">${item.name }</h4>
+							<h3>
+								${item.priceFormat} VNĐ<span>/Đêm</span>
+							</h3>
+							<table>
+								<tbody>
+									<tr>
+										<td class="r-o">Không gian:</td>
+										<td>${item.space}m<sup>2</sup></td>
+									</tr>
+									<tr>
+										<td class="r-o">Sức chứa:</td>
+										<td><strong>${item.quantity} người</strong></td>
+									</tr>
+									<tr>
+										<td class="r-o">Giường:</td>
+										<td>Giường lớn</td>
+									</tr>
+									<tr>
+										<td class="r-o">Dịch vụ:</td>
+										<td>Wifi, TV, Phòng tắm,...</td>
+									</tr>
+								</tbody>
+							</table>
+							<a href="<c:url value='/chi-tiet?id=${item.id}'/>"
+								class="primary-btn">Xem chi tiết</a>
+
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-2.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Phòng đơn</h4>
-						<h3>
-							200.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>30 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td>1 người</td>
-								</tr>
-								<tr>
-									<td class="r-o">Bed:</td>
-									<td>Giường đơn</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-3.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Phòng sang trọng</h4>
-						<h3>
-							600.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>60 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td>4 Người</td>
-								</tr>
-								<tr>
-									<td class="r-o">Bed:</td>
-									<td>Giường lớn</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-4.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Phòng cảnh đẹp</h4>
-						<h3>
-							490.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>40 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td>Max persion 1</td>
-								</tr>
-								<tr>
-									<td class="r-o">Bed:</td>
-									<td>King Giường</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-5.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Phòng gia đình</h4>
-						<h3>
-							500.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>60 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td>Max persion 1</td>
-								</tr>
-								<tr>
-									<td class="r-o">Bed:</td>
-									<td>King Giường</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="room-item">
-					<img src="<c:url value = '/template/web/img/room/room-6.jpg'/>"
-						alt="" />
-					<div class="ri-text">
-						<h4>Căn hộ</h4>
-						<h3>
-							700.000 VNĐ<span>/Đêm</span>
-						</h3>
-						<table>
-							<tbody>
-								<tr>
-									<td class="r-o">Không gian:</td>
-									<td>80 m</td>
-								</tr>
-								<tr>
-									<td class="r-o">Sức chứa:</td>
-									<td> 2 người</td>
-								</tr>
-								<tr>
-									<td class="r-o">Bed:</td>
-									<td>King Giường</td>
-								</tr>
-								<tr>
-									<td class="r-o">Dịch vụ:</td>
-									<td>Wifi, TV, Phòng tắm,...</td>
-								</tr>
-							</tbody>
-						</table>
-						<a href="#" class="primary-btn">Xem chi tiết</a>
-					</div>
-				</div>
-			</div>
+			</c:forEach>
+
+
 		</div>
 	</div>
 </section>

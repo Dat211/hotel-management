@@ -10,20 +10,16 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class RoleEntity extends BaseEntity{
-	
-	@ManyToMany(mappedBy = "roles") //biến gọi bên account
+public class RoleEntity extends BaseEntity {
+
+	@ManyToMany(mappedBy = "roles") // biến gọi bên account
 	private List<AccountEntity> accounts = new ArrayList<>();
-	@Column
-	private String namerole;
-
-	public String getNamerole() {
-		return namerole;
-	}
-
-	public void setNamerole(String namerole) {
-		this.namerole = namerole;
-	}
+	
+	@Column(name = "namerole")
+	private String nameRole;
+	
+	@Column(name = "rolecode")
+	private String roleCode;
 
 	public List<AccountEntity> getAccounts() {
 		return accounts;
@@ -33,6 +29,20 @@ public class RoleEntity extends BaseEntity{
 		this.accounts = accounts;
 	}
 
-	
-	
+	public String getNameRole() {
+		return nameRole;
+	}
+
+	public void setNameRole(String nameRole) {
+		this.nameRole = nameRole;
+	}
+
+	public String getRoleCode() {
+		return roleCode;
+	}
+
+	public void setRoleCode(String roleCode) {
+		this.roleCode = roleCode;
+	}
+
 }

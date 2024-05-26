@@ -30,14 +30,14 @@ public class RoomEntity extends BaseEntity {
     @JoinColumn(name = "typeroom_id")
     private TypeRoomEntity typeroom;
 	
-	@Column
+	@Column(name = "name")
 	private String name;
 
 
-	@Column
-	private int ratequantity;
+	@Column(name = "ratequantity")
+	private int rateQuantity;
 
-	@Column
+	@Column(name = "image")
 	private String image;
 
 	public String getName() {
@@ -48,13 +48,12 @@ public class RoomEntity extends BaseEntity {
 		this.name = name;
 	}
 
-
 	public int getRatequantity() {
-		return ratequantity;
+		return rateQuantity;
 	}
 
 	public void setRatequantity(int ratequantity) {
-		this.ratequantity = ratequantity;
+		this.rateQuantity = ratequantity;
 	}
 
 	public String getImage() {

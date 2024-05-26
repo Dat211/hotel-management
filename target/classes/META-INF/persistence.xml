@@ -6,3 +6,4 @@
 	<persistence-unit name="persistence-data">
 	</persistence-unit>
 </persistence>
+<!-- cấu hình thông tin kết nối cơ sở dữ liệu, như tên đơn vị liên kết đối tượng, cấu hình provider JPA (như Hibernate), cấu hình cache, đối tượng quản lý thực thể, và nhiều hơn nữa. -->

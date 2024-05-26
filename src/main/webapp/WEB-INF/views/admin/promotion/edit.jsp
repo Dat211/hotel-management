@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="/common/taglib.jsp" %>
 
 <div class="container-fluid">
 
@@ -11,12 +12,13 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary">Chỉnh sửa khuyến
+			<h6 class="m-0 font-weight-bold text-primary">${model.id == 0 ? "Thêm" : "Chỉnh sửa"}  khuyến
 				mãi</h6>
 		</div>
 		<div class="card-body">
 			<div class="">
 				<div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+				<form:form action="/hotel/quan-tri/khuyen-mai/luu" method="post" modelAttribute="model">
 					<div class="column">
 						<!-- <div class="col-sm-12 col-md-6">
 							
@@ -24,33 +26,55 @@
 						<div class="col-sm-12 col-md-6">
 							
 						</div> -->
+						<form:input type="hidden" class="form-control" path="id" />
 						<div class="row">
 							<div class="form-group col">
-								<label class="control-label col-sm-6">Tên khuyến mãi:</label>
+								<label class="control-label col-6 d-flex">Tên khuyến mãi: <p style="color:red;margin:0 5px ">*</p></label>
 								<div class="col-sm-12">
-									<input type="text" class="form-control" name="CustomerName"
-										autofocus value="" />
+									<form:input cssClass="form-control" path="name" autofocus="autofocus"/>
+									<form:errors cssStyle="color:red;padding-top:10px" path="name"/>
 								</div>
 							</div>
 							<div class="form-group col">
-							<label class="control-label col-sm-6">Thời gian:</label>
+							<label class="control-label col-6 d-flex">Thời gian: </label>
 								<div class="col-sm-12">
-									<input class="form-control" type="text" name="daterange" value="02/02/2024 - 02/4/2024" />
+									<form:input cssClass="form-control" type="text" path="dateRange" />
+									<form:errors cssStyle="color:red;padding-top:10px" path="dateRange"/>
+								</div>
+								<%-- ${model.startdate.toString().replace('-', '/')} - ${model.enddate.toString().replace('-', '/')} --%>
+							</div>
+						</div>
+
+						<div class="row">
+							
+							<div class="form-group col">
+							<label class="control-label col-6 d-flex">Giá trị giảm:  <p style="color:red;margin:0 5px ">*</p></label>
+								<div class="col-sm-12">
+									<form:input cssClass="form-control" type="number" min="1" path="level"  />
+									<form:errors cssStyle="color:red;padding-top:10px" path="level"/>
 								</div>
 								
 							</div>
 						</div>
-
-						<div class="form-group text-right">
-							<div class="col-lg-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-primary">
+						<div class="row">
+							
+							<div class="form-group col">
+							<label class="control-label col-sm-6">Mô tả:</label>
+								<div class="col-sm-12">
+									<form:input cssClass="form-control" type="text" path="description" />
+								</div>
+							</div>
+						</div>
+						<div class="form-group d-flex justify-content-end" style="padding: 0 12px;">
+							<div class="">
+								<form:button type="submit" class="btn btn-primary">
 									<i class="fa fa-floppy-o"></i> Lưu dữ liệu
-								</button>
-								<a href="/hotel/quan-tri/khach-hang" class="btn btn-secondary">
-									Quay lại </a>
+								</form:button>
+								<a onclick="history.back()" class="btn btn-secondary">Quay lại </a>
 							</div>
 						</div>
 					</div>
+				</form:form>
 				</div>
 			</div>
 		</div>

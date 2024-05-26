@@ -10,10 +10,12 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sona | Template</title>
+    <title>Khách Sạn Bình Minh</title>
 
+	<link rel="icon" href="<c:url value='/template/logo.png'/>" type="image/png">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
@@ -31,9 +33,7 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+   
 
     <!-- Offcanvas Menu Section Begin -->
     <div class="offcanvas-menu-overlay"></div>
@@ -48,22 +48,12 @@
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
-            <a href="#" class="bk-btn">Booking Now</a>
+            <a href="/hotel/trang-chu" class="bk-btn">Booking Now</a>
         </div>
         <nav class="mainmenu mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Trang chủ</a></li>
-                <li><a href="./rooms.html">Phòng</a></li>
-                <li><a href="./about-us.html">Về chúng tôi</a></li>
-                <li><a href="./pages.html">Trang khác</a>
-                    <ul class="dropdown">
-                        <li><a href="./room-details.html">Chi tiết phòng</a></li>
-                        <li><a href="#">Phòng đôi</a></li>
-                        <li><a href="#">Phòng gia đình</a></li>
-                        <li><a href="#">Phòng hạng sang</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Liên hệ</a></li>
+                <li class="active"><a href="/hotel/trang-chu">Trang chủ</a></li>
+                <li><a href="/hotel/phong">Phòng</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -101,7 +91,12 @@
             </form>
         </div>
     </div>
-    <!-- Search model end -->
+    <!-- Scroll to Top Button-->
+	<!-- <a class="scroll-to-top rounded" href="#page-top"> <i
+		class="fas fa-angle-up"></i>
+	</a> -->
+    
+    
 
     <!-- Js Plugins -->
     <script src="<c:url value = '/template/web/js/jquery-3.3.1.min.js'/>"></script>
@@ -113,6 +108,32 @@
     <script src="<c:url value = '/template/web/js/owl.carousel.min.js'/>"></script>
     <script src="<c:url value = '/template/web/js/main.js'/>"></script>
 	
+	<!-- date-range -->
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<script>
+		$(function() {
+			$('input[name="dateRange"]').daterangepicker(
+					{
+						opens : 'left',
+						locale:{
+							format: 'YYYY/MM/DD'
+						}
+					},
+					function(start, end, label) {
+						console.log("A new date selection was made: "
+								+ start.format('YYYY-MM-DD') + ' to '
+								+ end.format('YYYY-MM-DD'));
+					});
+		});
+	</script>
 </body>
 
 </html>

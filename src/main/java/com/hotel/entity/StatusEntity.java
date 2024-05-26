@@ -16,8 +16,8 @@ public class StatusEntity extends BaseEntity{
 		@OneToMany(mappedBy = "status", cascade = CascadeType.ALL)
 	    private List<RoomEntity> rooms;
 		
-		@Column
-		private String statusname;
+		@Column(name = "statusname")
+		private String statusName;
 
 		public List<RoomEntity> getRooms() {
 			return rooms;
@@ -28,11 +28,11 @@ public class StatusEntity extends BaseEntity{
 		}
 
 		public String getStatusname() {
-			return statusname;
+			return statusName;
 		}
 
 		public void setStatusname(String statusname) {
-			this.statusname = statusname;
+			this.statusName = statusname;
 		}
 
 		

@@ -6,18 +6,23 @@
 
 <head>
 
-<title><decorator:title default="HOTEL-ADMIN" /></title>
+<title><decorator:title default="HOTEL ADMIN" /></title>
+<link rel="icon" href="<c:url value='/template/logo.png'/>" type="image/png">
 <!-- Custom fonts for this template-->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link
 	href="<c:url  value = '/template/admin/vendor/fontawesome-free/css/all.min.css'/>"
 	rel="stylesheet" type="text/css">
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
 	rel="stylesheet">
+	<script
+		src="<c:url value='/template/admin/vendor/jquery/jquery.min.js'/>"></script>
+		
 <!-- Custom styles for this template-->
 <link href="<c:url value='/template/admin/css/sb-admin-2.min.css'/>"
 	rel="stylesheet">
@@ -63,32 +68,10 @@
 		class="fas fa-angle-up"></i>
 	</a>
 
-	<!-- Logout Modal-->
-	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-					<button class="close" type="button" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">Select "Logout" below if you are ready
-					to end your current session.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button"
-						data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="login.html">Logout</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
+	
 	<!-- Bootstrap core JavaScript-->
-	<script
-		src="<c:url value='/template/admin/vendor/jquery/jquery.min.js'/>"></script>
 	<script
 		src="<c:url value='/template/admin/vendor/bootstrap/js/bootstrap.bundle.min.js'/>"></script>
 
@@ -102,12 +85,12 @@
 	<!-- Page level plugins -->
 	<script
 		src="<c:url value='/template/admin/vendor/chart.js/Chart.min.js'/>"></script>
-
 	<!-- Page level custom scripts -->
 	<script
 		src="<c:url value='/template/admin/js/demo/chart-area-demo.js'/>"></script>
 	<script
 		src="<c:url value='/template/admin/js/demo/chart-pie-demo.js'/>"></script>
+		
 	<!-- date-range -->
 	<script type="text/javascript"
 		src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -115,13 +98,17 @@
 		src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 	<script type="text/javascript"
 		src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		
 	<link rel="stylesheet" type="text/css"
 		href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 	<script>
 		$(function() {
-			$('input[name="daterange"]').daterangepicker(
+			$('input[name="dateRange"]').daterangepicker(
 					{
-						opens : 'left'
+						opens : 'left',
+						locale:{
+							format: 'YYYY/MM/DD'
+						}
 					},
 					function(start, end, label) {
 						console.log("A new date selection was made: "
@@ -130,7 +117,11 @@
 					});
 		});
 	</script>
-
+<script
+		src="<c:url value='/template/admin/paging/jquery.twbsPagination.js' />"></script>
+		
+	<script src="<c:url value='/template/admin/js/bootstrap.min.js' />"></script>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 </body>
 
 </html>

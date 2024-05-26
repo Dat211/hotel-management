@@ -17,29 +17,32 @@ import javax.persistence.JoinColumn;
 @Table(name = "account")
 public class AccountEntity extends BaseEntity{
 	
+	@Column(name = "accountname")
+	private String accountName;
+
+	@Column(name = "image")
+	private String image;
+	
+	@Column(name = "fullname")
+	private String fullName;
+
+	@Column(name = "phone")
+	private String phone;
+
+	@Column(name = "address")
+	private String address;
+
+	@Column(name = "status")
+	private int status;
+
+	@Column(name = "password")
+	private String password;
+	
 	@OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
-    private List<OrderEntity> orders;
+    private List<OrderEntity> orders = new ArrayList<>();;
 	
 	@OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
 	private List<FeedBackEntity> feedbacks = new ArrayList<>();
-	
-	@Column
-	private String accountname;
-	
-	@Column
-	private String fullname;
-
-	@Column
-	private String phone;
-
-	@Column
-	private String address;
-
-	@Column
-	private boolean status;
-
-	@Column
-	private String password;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "account_role", //ten bang trung gian
@@ -47,20 +50,20 @@ public class AccountEntity extends BaseEntity{
 		inverseJoinColumns = @JoinColumn(name = "roleid"))
 	private List<RoleEntity> roles = new ArrayList<>();
 
-	public String getAccountname() {
-		return accountname;
+	public String getAccountName() {
+		return accountName;
 	}
 
-	public void setAccountname(String accountname) {
-		this.accountname = accountname;
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
 	}
 
-	public String getFullname() {
-		return fullname;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getPhone() {
@@ -79,11 +82,11 @@ public class AccountEntity extends BaseEntity{
 		this.address = address;
 	}
 
-	public boolean isStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -103,6 +106,14 @@ public class AccountEntity extends BaseEntity{
 		this.orders = orders;
 	}
 
+	public List<FeedBackEntity> getFeedbacks() {
+		return feedbacks;
+	}
+
+	public void setFeedbacks(List<FeedBackEntity> feedbacks) {
+		this.feedbacks = feedbacks;
+	}
+
 	public List<RoleEntity> getRoles() {
 		return roles;
 	}
@@ -110,6 +121,17 @@ public class AccountEntity extends BaseEntity{
 	public void setRoles(List<RoleEntity> roles) {
 		this.roles = roles;
 	}
-	
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+
 	
 }
+
+    

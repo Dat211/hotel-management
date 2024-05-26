@@ -1,14 +1,24 @@
+<%@page import="com.hotel.util.FeedbackUtils"%>
+<%@page import="com.hotel.dto.FeedBackDTO"%>
+<%@page import="com.hotel.util.SecurityUtils"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/common/taglib.jsp"%>
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+<nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow mb-4">
+
+
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+                    <%if(SecurityUtils.getPrincipal().getImg().equals("")||SecurityUtils.getPrincipal().getImg().isEmpty())
+                    {
+                    	SecurityUtils.getPrincipal().setImg("/template/admin/img/account/notphoto.png");
+                    }
+                    %>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -35,38 +45,33 @@
 
                         <!-- Nav Item - Messages -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
+                            
+                                <a class="text-center small text-gray-600 nav-link" href="<c:url value='/quan-tri/phan-hoi'/>"><i class="fas fa-envelope fa-fw mr-1"></i>Phản hồi</a>
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">2</span>
-                            </a>
+                          		<%-- <span class="badge badge-danger badge-counter">${requestScope.countFeedBack}</span> --%>
+                            
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                            <%-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Phản hồi
                                 </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Phòng bẩn, có gián</div>
-                                        <div class="small text-gray-500">Trần Nhật An · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Không có nước</div>
-                                        <div class="small text-gray-500">Nguyễn Việt Sơn · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="<c:url value='/quan-tri/phan-hoi'/>">Đọc thêm nhiều phản hồi</a>
-                            </div>
+                                 
+                                <!-- requestScope là gọi biến để dùng toàn bộ chương trình vì có tính @Scope -->
+                               <c:forEach items="${feedbackUtils.listFeedBack}" var="item"> 
+								    <a class="dropdown-item d-flex align-items-center" href="#">
+								        <div class="dropdown-list-image mr-3">
+								            <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+								            <div class="status-indicator bg-success"></div>
+								        </div>
+								        <div class="font-weight-bold">
+								            <!-- Hiển thị thông tin của từng phản hồi -->
+								            <div class="text-truncate">${item.description}</div>
+								            <div class="small text-gray-500">${item.accountName}</div>
+								        </div>
+								    </a>
+								</c:forEach>
+								 
+                            </div> --%>
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -74,25 +79,18 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nguyễn Văn A</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=SecurityUtils.getPrincipal().getFullname() %></span>
+                                <img class="img-profile rounded-circle" src="<c:url value='<%=SecurityUtils.getPrincipal().getImg() %>'/>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="<c:url value='/quan-tri/thong-tin?id=${SecurityUtils.getPrincipal().getId()}'/>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Thông tin cá nhân
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Cài đặt
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Hoạt động gần đây
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<c:url value='/thoat'/>" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Đăng xuất
                                 </a>

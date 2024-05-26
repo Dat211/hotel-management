@@ -1,4 +1,4 @@
-package com.hotel.untils;
+package com.hotel.util;
 
 public class DataUntil {
 

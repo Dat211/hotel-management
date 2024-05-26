@@ -13,23 +13,31 @@ import javax.persistence.Table;
 @Table(name = "promotion")
 public class PromotionEntity extends BaseEntity {
 	
-	@OneToMany(mappedBy = "promotion", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "promotion")
     private List<OrderEntity> orders;
 	
-	@Column
+	@Column(name = "name")
 	private String name;
 
-	@Column
+	@Column(name = "level")
 	private int level;
 
-	@Column
-	private Date startdate;
+	@Column(name = "startdate")
+	private Date startDate;
 
-	@Column
-	private Date enddate;
+	@Column(name = "enddate")
+	private Date endDate;
 
-	@Column
+	@Column(name = "description")
 	private String description;
+
+	public List<OrderEntity> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<OrderEntity> orders) {
+		this.orders = orders;
+	}
 
 	public String getName() {
 		return name;
@@ -47,20 +55,20 @@ public class PromotionEntity extends BaseEntity {
 		this.level = level;
 	}
 
-	public Date getStartdate() {
-		return startdate;
+	public Date getStartDate() {
+		return startDate;
 	}
 
-	public void setStartdate(Date startdate) {
-		this.startdate = startdate;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 
-	public Date getEnddate() {
-		return enddate;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setEnddate(Date enddate) {
-		this.enddate = enddate;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	public String getDescription() {
@@ -71,13 +79,4 @@ public class PromotionEntity extends BaseEntity {
 		this.description = description;
 	}
 
-	public List<OrderEntity> getOrders() {
-		return orders;
-	}
-
-	public void setOrders(List<OrderEntity> orders) {
-		this.orders = orders;
-	}
-	
-	
 }

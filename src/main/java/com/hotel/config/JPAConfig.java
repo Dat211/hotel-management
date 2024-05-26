@@ -24,7 +24,7 @@ public class JPAConfig {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 		em.setDataSource(dataSource());//Mo ket noi
-		//persistence-data - file nay cho biet enity nao map vs table nao va nguoc lai
+		
 		em.setPersistenceUnitName("persistence-data"); 
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
@@ -50,14 +50,14 @@ public class JPAConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver"); //load driver class name
 		dataSource.setUrl("jdbc:mysql://localhost:3306/hotel");
-		dataSource.setUsername("root");
-		dataSource.setPassword("nguyentiendat@123");
+		dataSource.setUsername("sa");
+		dataSource.setPassword("123456");
 		return dataSource;
 	}
 	
 	Properties additionalProperties() {
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto", "none");//tao db khi chua co(xoa roi tao lai)
+		properties.setProperty("hibernate.hbm2ddl.auto", "update");//tao db khi chua co(xoa roi tao lai)
 		properties.setProperty("hibernate.enable_lazy_load_no_trans", "true");//bật tính năng lazy loading 
 		return properties;
 	}

@@ -571,7 +571,7 @@ ul, ol {
 	line-height: 50px;
 	outline: none;
 	padding-left: 20px;
-	width: 100%;
+	
 	float: none;
 }
 .booking-form form .select-option .nice-select:after {
@@ -732,6 +732,7 @@ ul, ol {
 	margin-right: -15px;
 	position: relative;
 	overflow: hidden;
+	
 }
 .hp-room-items .hp-room-item:hover .hr-text {
 	bottom: 135px;
@@ -741,12 +742,14 @@ ul, ol {
 }
 .hp-room-items .hp-room-item .hr-text {
 	position: absolute;
-	left: 45px;
-	right: 25px;
-	bottom: -250px;
+	left: 20px;
+	right: 20px;
+	bottom: -265px;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 20px;
 }
 .hp-room-items .hp-room-item .hr-text h3 {
 	color: #ffffff;

@@ -1,52 +1,131 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/common/taglib.jsp"%>
+<%@ page import="javax.servlet.http.*" %>
+<c:url value="/phong" var="timPhong"/>
+<style>
+	.alert {
+	  padding: 15px;
+	  background-color: #4fc841;
+	  color: white; position: fixed; top: 0; right: 25%; left:25%; margin-top:10px;
+	  font-size:15px;
+	}
+	
+	.closebtn {
+	  margin-left: 15px;
+	  color: white;
+	  font-weight: bold;
+	  float: right;
+	  font-size: 22px;
+	  line-height: 20px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	  padding-top:5px;
+	}
+	
+	.closebtn:hover {
+	  color: black;
+	}
+	::-webkit-scrollbar {
+	  width: 0px; /* Đặt chiều rộng thanh cuộn */
+	}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Chạy thông báo thanh toán thành công -->
+<script>
+    function showAlert(notification) {
+    	Swal.fire({
+    		  icon: "success",
+    		  title: "Thông báo",
+    		  text: notification,
+    		  timer: 3000,
+    		}).then((result) => {
+            if (result.isConfirmed) {
+                // Nếu người dùng xác nhận, điều hướng tới href của thẻ <a>
+                window.location.href = document.getElementById('cancel-link').href;
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+        });
+        setTimeout(() => {
+    	    
+    	}, 3000);
+    }
+</script>
+<%
+    // Lấy giá trị của tham số "message" từ URL
+    String message = request.getParameter("message");
+
+    // Kiểm tra xem tham số "message" có tồn tại không
+    if (message != null) {
+        %>
+        <script>
+        	showAlert("Bạn đã thanh toán thành công!");
+	    </script>
+    <%}%>
+
+<!-- Chạy thông báo đặt phòng thành công -->
+
+<!-- Include SweetAlert2 JS -->
+
+
+<%
+    // Lấy giá trị của tham số "message" từ URL
+    String success = request.getParameter("success");
+
+    // Kiểm tra xem tham số "message" có tồn tại không
+    if (success != null) {
+%>
+    <script>
+        showAlert("Bạn đã đặt phòng thành công!");
+    </script>
+<%
+    }
+%>
+<!-- Nội dung -->
 
 <section class="hero-section">
+
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="hero-text">
 					<h1>Khách sạn Bình Minh</h1>
-					<p>Dưới đây là những trang web đặt phòng khách sạn hàng đầu,
+					<p>Trang web đặt phòng khách sạn hàng đầu,
 						bao gồm các đề xuất cho du lịch quốc tế và để tìm phòng khách sạn
 						giá rẻ.</p>
-					<a href="#" class="primary-btn">Discover Now</a>
+					
 				</div>
 			</div>
-			<div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+			<%-- <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
 				<div class="booking-form">
-					<h3>Đặt phòng</h3>
-					<form action="#">
-						<div class="check-date">
-							<label for="date-in">Check In:</label> <input type="text"
-								class="date-input" id="date-in"> <i
-								class="icon_calendar"></i>
-						</div>
-						<div class="check-date">
-							<label for="date-out">Check Out:</label> <input type="text"
-								class="date-input" id="date-out"> <i
-								class="icon_calendar"></i>
+					<h3>Tìm phòng</h3>
+					<form action="${timPhong }" method="get">
+					    <div class="check-date">
+					        <label for="date-in">Thời gian:</label> 
+					        <input type="text" class="form-control" name="dateRange" value="${dateRange }" />
+					        <i class="icon_calendar"></i>
+					    </div>
+
+						<div class="select-option">
+							<label for="guest">Số người:</label> 
+							<div class="wrapper" >
+								<select name="countUser" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+									<c:forEach begin="1" end="6" var="item">
+										<option value="${item }">${item } người</option>
+									</c:forEach>
+									
+								</select>
+							</div>
 						</div>
 						<div class="select-option">
-							<label for="guest">Số người:</label> <select id="guest">
-								<option value="">1 người</option>
-								<option value="">2 người</option>
-								<option value="">3 người</option>
-							</select>
-						</div>
-						<div class="select-option">
-							<label for="room">Loại phòng:</label> <select id="room">
-								<option value="">Phòng đơn</option>
-								<option value="">Phòng đôi</option>
-								<option value="">Phòng gia đình</option>
-								<option value="">Phòng sang trọng</option>
-							</select>
+							
 						</div>
 						<button type="submit">Kiểm tra</button>
 					</form>
 				</div>
-			</div>
+			</div> --%>
 		</div>
 	</div>
 	<div class="hero-slider owl-carousel">
@@ -74,7 +153,7 @@
 					</div>
 					<p class="f-para">Đặt phòng ngay hôm nay để có khuyến mãi hấp đẫn.</p>
 					<p class="s-para">Hãy đến với chúng tôi để có một trải nghiệm tuyệt vời.</p>
-					<a href="#" class="primary-btn about-btn">Đọc thêm</a>
+				
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -163,141 +242,49 @@
 	</div>
 </section>
 <!-- Services Section End -->
-
+<div class="row d-flex justify-content-end mr-3 " style="margin-top:-50px">
+	<a style="color:#333; padding:20px; font-size:23px" href='<c:url value="/phong"/>' ><i class="fa-solid fa-up-right-from-square"></i> Hiển thị thêm</a>
+</div>
 <!-- Home Room Section Begin -->
 <section class="hp-room-section">
 	<div class="container-fluid">
 		<div class="hp-room-items">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="hp-room-item set-bg"
-						data-setbg="<c:url value = '/template/web/img/room/room-b1.jpg'/>">
-
-						<div class="hr-text">
-							<h3>Phòng đôi</h3>
-							<h2>
-								440.000 VNĐ<span>/Đêm</span>
-							</h2>
-							<table>
-								<tbody>
-									<tr>
-										<td class="r-o">Không gian:</td>
-										<td>30 m</td>
-									</tr>
-									<tr>
-										<td class="r-o">Sức chứa:</td>
-										<td>2 người</td>
-									</tr>
-									<tr>
-										<td class="r-o">Giường:</td>
-										<td>Giường đôi</td>
-									</tr>
-									<tr>
-										<td class="r-o">Dịch vụ:</td>
-										<td>Wifi, TV, Bồn tắm,...</td>
-									</tr>
-								</tbody>
-							</table>
-							<a href="#" class="primary-btn">Thông tin chi tiết</a>
+			<div class="d-flex flex-row "  id="scrollContainer" style="overflow-x: auto !important; 
+                      overflow-y: hidden;
+                      white-space: nowrap;
+                      scroll-snap-type: x mandatory;">
+				<c:forEach items="${ typerooms}" var="item"> 
+					<div class="col-lg-3 col-md-6">
+						<div class="hp-room-item set-bg"
+							data-setbg="<c:url value = '${item.getImage() }'/>">
+							<div class="hr-text" style="margin-bottom:-10px">
+								<h3>${item.getName() }</h3>
+								<h2>
+									${item.getPriceFormat()} VNĐ<span>/Đêm</span>
+								</h2>
+								<table>
+									<tbody>
+										<tr>
+											<td class="r-o">Không gian:</td>
+											<td>${item.getSpace() } m<sup>2</sup></td>
+										</tr>
+										<tr>
+											<td class="r-o">Sức chứa:</td>
+											<td>${item.getQuantity() } người</td>
+										</tr>
+										
+										<tr>
+											<td class="r-o">Dịch vụ:</td>
+											<td>Wifi, TV, Phòng tắm,...</td>
+										</tr>
+									</tbody>
+								</table>
+								<a href="<c:url value='/chi-tiet?id=${item.getId() }'/>" class="primary-btn " >Thông tin chi tiết</a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="hp-room-item set-bg"
-						data-setbg="<c:url value = '/template/web/img/room/room-b2.jpg'/>">
-						<div class="hr-text">
-							<h3>Phòng đơn</h3>
-							<h2>
-								200.000 VNĐ<span>/Đêm</span>
-							</h2>
-							<table>
-								<tbody>
-									<tr>
-										<td class="r-o">Không gian:</td>
-										<td>20 m</td>
-									</tr>
-									<tr>
-										<td class="r-o">Sức chứa:</td>
-										<td>1 người</td>
-									</tr>
-									<tr>
-										<td class="r-o">Giường:</td>
-										<td>Giường đơn</td>
-									</tr>
-									<tr>
-										<td class="r-o">Dịch vụ:</td>
-										<td>Wifi, TV, Phòng tắm,...</td>
-									</tr>
-								</tbody>
-							</table>
-							<a href="#" class="primary-btn">Thông tin chi tiết</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="hp-room-item set-bg"
-						data-setbg="<c:url value = '/template/web/img/room/room-b3.jpg'/>">
-						<div class="hr-text">
-							<h3>Phòng sang trọng</h3>
-							<h2>
-								600.000 VNĐ<span>/Đêm</span>
-							</h2>
-							<table>
-								<tbody>
-									<tr>
-										<td class="r-o">Không gian:</td>
-										<td>60 m</td>
-									</tr>
-									<tr>
-										<td class="r-o">Sức chứa:</td>
-										<td>4 người</td>
-									</tr>
-									<tr>
-										<td class="r-o">Giường:</td>
-										<td>Giường lớn</td>
-									</tr>
-									<tr>
-										<td class="r-o">Dịch vụ:</td>
-										<td>Wifi, TV, Phòng tắm,...</td>
-									</tr>
-								</tbody>
-							</table>
-							<a href="#" class="primary-btn">Thông tin chi tiết</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="hp-room-item set-bg"
-						data-setbg="<c:url value = '/template/web/img/room/room-b4.jpg'/>">
-						<div class="hr-text">
-							<h3>Phòng gia đình</h3>
-							<h2>
-								500.000 VNĐ<span>/Đêm</span>
-							</h2>
-							<table>
-								<tbody>
-									<tr>
-										<td class="r-o">Không gian:</td>
-										<td>60 m</td>
-									</tr>
-									<tr>
-										<td class="r-o">Sức chứa:</td>
-										<td>4 người</td>
-									</tr>
-									<tr>
-										<td class="r-o">Giường:</td>
-										<td>Giường lớn</td>
-									</tr>
-									<tr>
-										<td class="r-o">Dịch vụ:</td>
-										<td>Wifi, TV, Phòng tắm,...</td>
-									</tr>
-								</tbody>
-							</table>
-							<a href="#" class="primary-btn">Thông tin chi tiết</a>
-						</div>
-					</div>
-				</div>
+				</c:forEach>
+					
 			</div>
 		</div>
 	</div>
@@ -444,3 +431,29 @@
 		</div>
 	</div>
 </section>
+<!-- <div class="alert text-center" >
+		  <span class="closebtn" ><i class="fa-solid fa-xmark"></i></span> 
+		  <strong>Success !</strong> Bạn đã thanh toán thành công vui lòng chờ ít phút.
+		</div> -->
+<script>
+	const alert = document.querySelector(".alert");
+	const ex = document.querySelector(".closebtn");
+	ex.addEventListener('click',function(){
+		this.parentElement.style.display='none';
+		alert.style.transition = 'opacity 1s ease';
+	    alert.style.opacity = '0';
+	    setTimeout(() => {
+	        alert.style.display = 'none';
+	    }, 1000);
+	});
+	setTimeout(() => {
+	    // Thêm hiệu ứng làm mờ
+	    alert.style.transition = 'opacity 1s ease';
+	    alert.style.opacity = '0';
+
+	    // Ẩn phần thông báo sau khi hoàn thành hiệu ứng làm mờ
+	    setTimeout(() => {
+	        alert.style.display = 'none';
+	    }, 1000); // Thời gian delay tương ứng với thời gian của hiệu ứng làm mờ
+	}, 3000);
+</script>
